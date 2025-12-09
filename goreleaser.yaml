@@ -33,8 +33,6 @@ builds:
   - goarch: "386"
     goos: darwin
   mod_timestamp: "{{ .CommitTimestamp }}"
-changelog:
-  enabled: false
 checksum:
   algorithm: sha256
   extra_files:
