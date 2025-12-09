@@ -34,7 +34,7 @@ builds:
     goos: darwin
   mod_timestamp: "{{ .CommitTimestamp }}"
 changelog:
-  skip: true
+  enabled: false
 checksum:
   algorithm: sha256
   extra_files:
