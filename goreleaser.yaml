@@ -1,4 +1,5 @@
 ---
+version: 2
 # Visit https://goreleaser.com for documentation on how to customize this
 # behavior.
 archives:
@@ -32,8 +33,6 @@ builds:
   - goarch: "386"
     goos: darwin
   mod_timestamp: "{{ .CommitTimestamp }}"
-changelog:
-  skip: true
 checksum:
   algorithm: sha256
   extra_files:
@@ -44,15 +43,3 @@ release:
   extra_files:
   - glob: terraform-registry-manifest.json
     name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
-signs:
-- artifacts: checksum
-  args:
-  # If you are using this in a GitHub action or some other automated pipeline,
-  # you need to pass the batch flag to indicate its not interactive.
-  - --batch
-  - --local-user
-  - "{{ .Env.GPG_FINGERPRINT }}"  # set this environment variable for your signing key
-  - --output
-  - ${signature}
-  - --detach-sign
-  - ${artifact}
