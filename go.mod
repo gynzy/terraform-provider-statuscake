@@ -9,7 +9,7 @@ require (
 	golang.org/x/time v0.14.0
 )
 
-replace github.com/StatusCakeDev/statuscake-go => github.com/gynzy/statuscake-go v1.3.0-gynzy1
+replace github.com/StatusCakeDev/statuscake-go => github.com/gynzy/statuscake-go v1.3.0-gynzy2
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
